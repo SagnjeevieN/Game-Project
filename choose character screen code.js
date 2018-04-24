@@ -43,7 +43,7 @@ var btn1 = new Button({
     width: 125,
     label: "Male Name",
     onClick: function() {
-        text("You made the right choice!", this.x, this.y+this.height);
+        text("Nice! Onto the tutorial", this.x, this.y+this.height);
     }
 });
 btn1.draw();
@@ -55,7 +55,7 @@ var btn2 = new Button({
     width: 125,
     label: "Female Name",
     onClick: function() {
-        text("Yay, you picked me!", this.x, this.y+this.height);
+        text("Nice! Onto the tutorial", this.x, this.y+this.height);
     }
 });
 btn2.draw();
