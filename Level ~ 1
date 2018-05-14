@@ -1,0 +1,25 @@
+var sceneO = 0;
+var grassXs = [];
+for (var i = 0; i < 25; i++) {
+    grassXs.push(i*20);
+}
+
+draw = function() {
+    // sky + ground
+    background(146, 248, 252);
+    fill(133, 80, 45);
+    rect(0, height*0.80, width, height*0.20);
+    
+   // sun
+   fill(255, 247, 0);
+   ellipse(346, 58, 70, 70);
+   
+   
+    // draw blocks
+    for (var i = 0; i < grassXs.length; i++) {
+        image(getImage("cute/GrassBlock"), grassXs[i], height*0.75, 50, 20);
+        
+        
+        }
+        
+    };
