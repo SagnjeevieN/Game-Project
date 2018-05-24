@@ -6,9 +6,18 @@ for (var i = 0; i < 8; i++) {
 var char = function(x, y) {
     this.x = x;
     this.y = y;
-    fill(245, 0, 245);
+    char = fill(245, 0, 245);
     ellipse(200, 200, 30, 30);
 };
+
+var yVel = 0;
+
+var gravity = 1.2;
+
+var isJumping = false;
+
+
+
 
 char.draw = function() {
     fill(245, 0, 245);
@@ -16,6 +25,19 @@ char.draw = function() {
     );
 };
 
+char.jump = function() {
+    if (isJumping == false) {
+        yVel = -15;
+        isJumping = true;
+        
+    }   
+
+}
+
+jumpLoop = function() {
+    if   
+    
+}
 
 draw = function() {
     // sky + ground
@@ -28,7 +50,7 @@ draw = function() {
      noStroke();
     
     //character
-        char.draw();
+       char.draw();
         
      // sun
      fill(255, 247, 0);
@@ -42,20 +64,14 @@ draw = function() {
        
        
        for (var i = 0; i < grassXs.length; i++) {
-        image(getImage("cute/GrassBlock"), 264, 315, 171, 40);
-       
+        image(getImage("cute/GrassBlock"), 264, 315, 171, 40)
+        
+    }
+        
+    }
      
-
-
-
-    
-        
-    }
-        
-    }
-    
-    
-    
+};
+      
     
 };
     
