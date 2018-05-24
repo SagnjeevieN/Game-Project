@@ -3,14 +3,6 @@ var grassXs = [];
 for (var i = 0; i < 8; i++) {
     grassXs.push(i*23);
 }
-//scene 2
-var sceneI = 12;
-var grassYs = [];
-for (var m = 1; m < 30; m++) {
-    grassYs.push(m*20);
-}
-
-
 var char = function(x, y) {
     this.x = x;
     this.y = y;
@@ -18,7 +10,11 @@ var char = function(x, y) {
     ellipse(200, 200, 30, 30);
 };
 
-var Char = new char (200, 200);
+char.draw = function() {
+    fill(245, 0, 245);
+    ellipse(21, 312, 30, 30
+    );
+};
 
 
 draw = function() {
@@ -30,6 +26,9 @@ draw = function() {
      fill(146, 248, 252);
      rect(191, 316, 73, 185);
      noStroke();
+    
+    //character
+        char.draw();
         
      // sun
      fill(255, 247, 0);
@@ -37,14 +36,28 @@ draw = function() {
    
     // draw blocks
     for (var i = 0; i < grassXs.length; i++) {
-        image(getImage("cute/GrassBlock"), grassXs[i], height*0.77, 30, 40);
+        image(getImage("cute/GrassBlock"), 0, 315, 191, 40);
+        
+        
        
+       
+       for (var i = 0; i < grassXs.length; i++) {
+        image(getImage("cute/GrassBlock"), 264, 315, 171, 40);
        
      
+
+
+
+    
         
-        }
+    }
         
-    };
+    }
+    
+    
+    
+    
+};
     
     
    
