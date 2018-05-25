@@ -87,25 +87,14 @@ draw = function() {
     // draw blocks
     for (var i = 0; i < grassXs.length; i++) {
         image(getImage("cute/GrassBlock"), 0, 315, 191, 40);
-        
-        
-       
        
        for (var i = 0; i < grassXs.length; i++) {
-        image(getImage("cute/GrassBlock"), 264, 315, 171, 40);
+        image(getImage("cute/GrassBlock"), 264, 315, 137, 40);
        
-     
-
-
-
-    
-        
-    }
         
     }
     
-    
-    
-    
+    }
 };
+    
     
