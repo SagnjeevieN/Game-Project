@@ -16,8 +16,15 @@ var gravity = 1.2;
 
 var isJumping = false;
 
+var stageHeight = 300;
 
+var stageWidth = 600;
 
+var blockHeight = 70;
+
+var characterHeight = 100;
+
+var characterGround = stageHeight - blockHeight - characterHeight;
 
 char.draw = function() {
     fill(245, 0, 245);
@@ -26,18 +33,28 @@ char.draw = function() {
 };
 
 char.jump = function() {
-    if (isJumping == false) {
+    if (isJumping === false) {
         yVel = -15;
         isJumping = true;
         
     }   
 
-}
+};
 
-jumpLoop = function() {
-    if   
-    
-}
+var jumpLoop = function() {
+    if (isJumping) {
+        yVel += gravity;
+        char.y += yVel;
+        if (char.y > characterGround) {
+            char.y = characterGround; 
+            yVel = 0;
+            isJumping = false;
+            
+        }
+    } 
+};
+
+
 
 draw = function() {
     // sky + ground
@@ -64,17 +81,19 @@ draw = function() {
        
        
        for (var i = 0; i < grassXs.length; i++) {
-        image(getImage("cute/GrassBlock"), 264, 315, 171, 40)
-        
-    }
-        
-    }
+        image(getImage("cute/GrassBlock"), 264, 315, 171, 40);
+       
      
-};
-      
+
+
+
+    
+        
+    }
+        
+    }
+    
+    
+    
     
 };
-    
-    
-   
-    
