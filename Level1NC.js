@@ -10,11 +10,6 @@ var char = function(x, y) {
     ellipse(200, 200, 30, 30);
 };
 
-var yVel = 0;
-
-var gravity = 1.2;
-
-var isJumping = false;
 
 var stageHeight = 300;
 
@@ -23,6 +18,22 @@ var stageWidth = 600;
 var blockHeight = 70;
 
 var characterHeight = 100;
+
+var characterWidth = 100;
+
+var jumpSpeed = 1000;
+
+var yVel = 0;
+
+var xVel = 7;
+
+var gravity = 1.2;
+
+var isJumping = false;
+
+var right = false;
+
+var left = false;
 
 var characterGround = stageHeight - blockHeight - characterHeight;
 
@@ -97,3 +108,4 @@ draw = function() {
     
     
 };
+    
