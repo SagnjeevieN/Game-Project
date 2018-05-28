@@ -10,7 +10,6 @@ var char = function(x, y) {
     ellipse(200, 200, 30, 30);
 };
 
-
 var stageHeight = 300;
 
 var stageWidth = 600;
@@ -50,7 +49,6 @@ char.draw = function() {
 
 };
 
-
 var jumpLoop = function() {
     if (isJumping) {
         yVel += gravity;
@@ -63,10 +61,6 @@ var jumpLoop = function() {
         } 
     } 
 };
-
-
-
-
 
 var handleKeyDown = function(e) {
     switch (e.keyCode) {
@@ -85,8 +79,6 @@ var handleKeyDown = function(e) {
     }
 };
 
-
-
 char.jump = function() {
     if (isJumping === false) {
         yVel = -15;
@@ -95,8 +87,6 @@ char.jump = function() {
     }   
 
 };
-
-
 
 draw = function() {
     // sky + ground
@@ -121,8 +111,7 @@ draw = function() {
        
        for (var i = 0; i < grassXs.length; i++) {
         image(getImage("cute/GrassBlock"), 264, 315, 137, 40);
-       
-        
+              
     }
     
     }
