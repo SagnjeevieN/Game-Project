@@ -21,6 +21,12 @@ var characterHeight = 100;
 
 var characterWidth = 100;
 
+var key_Space = 32;
+
+var key_Left = 37;
+
+var key_Right = 39;
+
 var jumpSpeed = 1000;
 
 var yVel = 0;
@@ -39,18 +45,11 @@ var characterGround = stageHeight - blockHeight - characterHeight;
 
 char.draw = function() {
     fill(245, 0, 245);
-    ellipse(21, 312, 30, 30
-    );
-};
-
-char.jump = function() {
-    if (isJumping === false) {
-        yVel = -15;
-        isJumping = true;
-        
-    }   
+    ellipse(21, 312, 30, 30);
+    this.y = constrain(this.y, 0, height-50);
 
 };
+
 
 var jumpLoop = function() {
     if (isJumping) {
@@ -61,8 +60,40 @@ var jumpLoop = function() {
             yVel = 0;
             isJumping = false;
             
-        }
+        } 
     } 
+};
+
+
+
+
+
+var handleKeyDown = function(e) {
+    switch (e.keyCode) {
+        case key_Space:
+        case 87:  // W
+            jumpLoop();
+            break;
+        case key_Left:
+        case 65:  // A
+            left = true;
+            break;
+        case key_Right:
+        case 68:  // D
+            right = true;
+            break;
+    }
+};
+
+
+
+char.jump = function() {
+    if (isJumping === false) {
+        yVel = -15;
+        isJumping = true;
+        
+    }   
+
 };
 
 
@@ -96,5 +127,4 @@ draw = function() {
     
     }
 };
-    
     
