@@ -42,6 +42,8 @@ var left = false;
 
 var characterGround = stageHeight - blockHeight - characterHeight;
 
+this.y = constrain(this.y, 0, height-50);
+
 char.draw = function() {
     fill(245, 0, 245);
     ellipse(21, 312, 30, 30);
@@ -77,6 +79,30 @@ var handleKeyDown = function(e) {
             right = true;
             break;
     }
+};
+
+var handleKeyUp = function(e) {
+    switch (e.keyCode) {
+        case key_Left:
+        case 65: // A
+            left = false;
+            break;
+        case key_Right:
+            case 68: // D
+            right = false;
+            break;
+    }
+};
+
+var jump = function() {
+    if (isJumping === false) {
+        yVel = -15;
+        isJumping = true;
+    
+    
+    
+    
+    }   
 };
 
 char.jump = function() {
@@ -116,4 +142,3 @@ draw = function() {
     
     }
 };
-    
