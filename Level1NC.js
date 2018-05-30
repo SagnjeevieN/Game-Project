@@ -12,7 +12,7 @@ var char = function(x, y) {
 
 var stageHeight = 300;
 
-var stageWidth = 600;
+var stageWidth = 400;
 
 var blockHeight = 70;
 
