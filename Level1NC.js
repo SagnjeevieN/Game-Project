@@ -12,7 +12,7 @@ var char = function(x, y) {
 
 var stageHeight = 300;
 
-var stageWidth = 400;
+var stageWidth = 600;
 
 var blockHeight = 70;
 
@@ -105,7 +105,7 @@ var jump = function() {
     }   
 };
 
-char.jump = function() {
+char.prototype.jump = function() {
     if (isJumping === false) {
         yVel = -15;
         isJumping = true;
@@ -113,6 +113,13 @@ char.jump = function() {
     }   
 
 };
+
+var tick = function(event) {
+    
+    
+    
+};
+
 
 draw = function() {
     // sky + ground
@@ -128,7 +135,7 @@ draw = function() {
        char.draw();
         
      // sun
-     fill(255, 247, 0);
+     fill(255, 247, 0); 
      ellipse(346, 58, 70, 70);
    
     // draw blocks
