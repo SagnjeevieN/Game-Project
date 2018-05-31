@@ -10,6 +10,16 @@ var char = function(x, y) {
     ellipse(200, 200, 30, 30);
 };
 
+var character;
+
+var ground;
+
+var stage;
+
+var assets;
+
+var loader;
+
 var stageHeight = 300;
 
 var stageWidth = 600;
@@ -64,6 +74,45 @@ var jumpLoop = function() {
     } 
 };
 
+
+
+var handleFileLoad = function(event) {
+    assets.push(event.item);
+    
+};
+
+var handleKeyDown = function(e) {
+    switch (e.keyCode) {
+        case key_Space:
+        case 87:  // W
+            jumpLoop();
+            break;
+        case key_Left:
+        case 65:  // A
+            left = true;
+            break;
+        case key_Right:
+        case 68:  // D
+            right = true;
+            break;
+    }
+};
+
+ 
+
+var jumpLoop = function() {
+    if (isJumping) {
+        yVel += gravity;
+        char.y += yVel;
+        if (char.y > characterGround) {
+            char.y = characterGround; 
+            yVel = 0;
+            isJumping = false;
+            
+        } 
+    } 
+};
+
 var handleKeyDown = function(e) {
     switch (e.keyCode) {
         case key_Space:
@@ -99,7 +148,7 @@ var jump = function() {
         yVel = -15;
         isJumping = true;
     
-    
+
     
     
     }   
@@ -115,11 +164,21 @@ char.prototype.jump = function() {
 };
 
 var tick = function(event) {
-    
-    
-    
-};
+    if (left) {
+        if (char.scaleX > 0) {
+        char.scaleX *= -1;
+        char.x += characterWidth;
+        
+        }
+    } else if (right) {
+        char.x -= xVel;
+        if (char.scaleX > 0) {
+            char.scaleX *= -1;
+            char.x += characterWidth;
 
+        }
+    }
+};
 
 draw = function() {
     // sky + ground
