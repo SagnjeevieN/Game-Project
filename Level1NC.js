@@ -204,7 +204,7 @@ draw = function() {
        for (var i = 0; i < grassXs.length; i++) {
         image(getImage("cute/GrassBlock"), 264, 315, 137, 40);
               
-    }
+    };
     
     }
 };
