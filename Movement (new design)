@@ -1,0 +1,81 @@
+
+
+keyPressed = function() {
+    
+};
+
+
+
+var Player = function(x, y, size, speed) {
+    this.x = x - 70;
+    this.y = y + 200;
+    this.size = 30;
+    this.speed = 3;
+    this.jmpSpeed = 3;
+    this.update = function() {
+    this.y = constrain(this.y, 200, height-40);
+     
+       
+         if (keyIsPressed && keyCode === UP) {
+            this.y = this.y - this.jmpSpeed;
+                
+         }  else {  
+            
+             if (this.y === 4){
+             
+              this.y = this.y + 4;
+             
+             
+            } this.y = this.y + 4;
+         
+          if (keyIsPressed && keyCode === DOWN) {
+            this.y = this.y + this.speed;
+         }
+         
+          if (keyIsPressed && keyCode === LEFT) {
+            this.x = this.x - this.speed;
+         }
+    
+          if (keyIsPressed && keyCode === RIGHT) {
+            this.x = this.x + this.speed;
+         }
+        
+        }       
+    
+    noStroke();
+    fill(8, 24, 247);
+    ellipse(this.x, this.y, 13, 13);
+    };
+
+};
+
+var player = new Player(100, 100, 9, 1);
+
+var Background = function() {
+    background (38, 201, 255);
+    fill(38, 194, 17);
+    rect(-6, 324, 433, 83);
+    fill(87, 39, 5);
+    rect(-6, 324, 433, 83);   
+   //Ground(grass
+fill(38, 194, 17);
+rect(-6, 324, 433, 83);
+
+//Ground(dirt)  
+fill(87, 39, 5);
+rect(-6, 355, 434, 54);
+    player.update();
+};  
+
+var blure = noFill(); fill(3, 255, 188); ellipse(200, 100, 10, 10);
+
+var dropY = 100;
+draw = function() {
+     noFill();
+     fill(3, 255, 188);
+     dropY = dropY + 1;    
+     ellipse(200, dropY, 10, 10);
+       Background();
+    
+     
+};
