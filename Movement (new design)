@@ -52,30 +52,29 @@ var Player = function(x, y, size, speed) {
 var player = new Player(100, 100, 9, 1);
 
 var Background = function() {
-    background (38, 201, 255);
+    background (172, 217, 230);
     fill(38, 194, 17);
     rect(-6, 324, 433, 83);
-    fill(87, 39, 5);
+    fill(38, 194, 17);
     rect(-6, 324, 433, 83);   
    //Ground(grass
 fill(38, 194, 17);
 rect(-6, 324, 433, 83);
 
 //Ground(dirt)  
-fill(87, 39, 5);
+fill(38, 194, 17);
 rect(-6, 355, 434, 54);
     player.update();
 };  
 
-var blure = noFill(); fill(3, 255, 188); ellipse(200, 100, 10, 10);
-
 var dropY = 100;
+
 draw = function() {
-     noFill();
-     fill(3, 255, 188);
-     dropY = dropY + 1;    
-     ellipse(200, dropY, 10, 10);
-       Background();
-    
-     
+Background();
+
+noStroke();
+fill(0, 200, 255);
+dropY = dropY + 1;
+ellipse(200, dropY, 10, 10);
+
 };
