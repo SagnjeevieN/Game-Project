@@ -114,6 +114,7 @@ draw = function() {
        
     }
     drawBackground();
+    btn2();
  var triX = mouseX;
         var triY = 320;
         noStroke();
