@@ -1,6 +1,7 @@
 var currentScene;
 function setup(){
     createCanvas(400, 400);
+    background(212, 241, 255);
     drawScene1();
             }
 var drawBackground = function() {
