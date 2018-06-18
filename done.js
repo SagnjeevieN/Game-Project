@@ -11,8 +11,8 @@ var drawBackground = function() {
     }*/
     // draw blocks
    image(loadImage("grass.png"), -6, 147, width, height*0.33);
-   fill(133, 80, 45);
-   rect(0, 387, width, height*0.33);
+   //fill(133, 80, 45);
+   //rect(0, 387, width, height*0.33);
 };
 
 var drawScene1 = function() {
