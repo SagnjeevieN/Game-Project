@@ -24,8 +24,8 @@ var drawScene1 = function() {
      fill(255, 247, 0); 
      ellipse(346, 41, 70, 70);
 
-var f = loadFont ("Arial");
-textFont(f,30);
+
+textSize(30);
 fill(102, 100, 100);
 text ("Welcome to Our Game!", 45,120); 
 
