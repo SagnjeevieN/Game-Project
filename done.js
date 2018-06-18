@@ -14,7 +14,7 @@ var drawBackground = function() {
    
     // draw blocks
     
-   image(loadImage("star.jpg"), -6, 347, 424, 40);
+   image(loadImage("star.png"), -6, 347, 424, 40);
 };
 var drawScene1 = function() {
     currentScene = 1;
@@ -78,7 +78,7 @@ imageMode(CORNER);
 textAlign(LEFT);
 //hearts 
 
-var getHeart = loadImage("star.jpg");
+var getHeart = loadImage("star.png");
 var heartPic = function(x, y, size) {
     image(getHeart, x, y, size/1.5, size); 
 };
