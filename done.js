@@ -6,7 +6,7 @@ function setup(){
 
 var drawBackground = function() {
     
-    var getGrass = loadImage("grassS.png");
+    var getGrass = loadImage("HEART-01.png");
     var grassPic = function(x, y, w, h) {
         image(getGrass, x, y, w, h); 
     };
