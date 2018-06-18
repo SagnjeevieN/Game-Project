@@ -26,7 +26,7 @@ var drawScene1 = function() {
 
 textSize(30);
 fill(102, 100, 100);
-text ("Welcome to Starcatcher Game!", 45,120); 
+text ("Welcome to Starcatcher!", 45,120); 
 
 
 var Button = function(config) {
