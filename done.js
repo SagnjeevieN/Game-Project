@@ -107,79 +107,58 @@ draw = function() {
     drawBackground();
  var triX = mouseX;
         var triY = 320;
-        
-        
         noStroke();
      
         fill(0, 0, 0);
-        
         textSize(18);
         text("Score: " + points + "  Stars: " + numStars, 40, 30);
-        
-        
         StarPic(starX, starY, 40);
-       
         starY += starSpeed;
         
         fill(0, 110, 179);
-        
         quad(triX+15, 360, triX-15, 360, triX-25,triY, triX+25,triY);
         
         if(lives > 3) {
-            
             lives = 3;
         }
         
         if(starY > 340 && starX > triX - 25 && starX < triX + 25) {
-            
             starY = -5;
             starX = random(20, 380);
-            
             starSpeed += starSpeedIncrease;
-            
             points += 1;
             numStars += 1; 
         }
         else if(starY > 380 && starY < 390) {
-           
             starY = -5;
             starX = random(20, 380);
             starSpeed += starSpeedDecrease;
-            
             lives -= 1;
-            numStars += 1; 
-            
+            numStars += 1;
         }
+    
         fill(0, 0, 0);
         text("Lives: ", 250, 30);
         for(var i = 0; i < lives && lives <=3; i += 1) {
-            
             heartPic(303 + i * 20, 0, 47);
         }
         
         if(lives < 1) {
-            
             starX = 500;
-            
             fill(0, 0, 0);
-            
             textSize(25);
             text("You LOSE!", 127, 180);
             text("You caught " + points + " star(s) out of " + numStars + " :(", 16, 200);
         }
     
        if(lives > 3) {
-            
             lives = 3;
         } 
-        
-    
-    };
+     };
 };
 
 var drawScene3 = function() {
     currentScene = 3;
-   
 };
 
 var drawScene4 = function() {
@@ -190,14 +169,7 @@ var drawScene5 = function() {
     currentScene = 5;
     
 };
-/*
-draw = function() {
-    if (currentScene === 4) {
-        drawScene4();
-    }
-    
-};
-*/
+
 mouseClicked = function() {
     
     if (currentScene === 1) {
@@ -213,5 +185,3 @@ mouseClicked = function() {
     }
     
 };
-
-//drawScene1();
