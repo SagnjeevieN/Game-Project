@@ -12,7 +12,7 @@ for (var i = 0; i < 8; i++) {
    
     // draw blocks
     
-        image(getImage("cute/GrassBlock"), -6, 347, 424, 40);
+        image(loadImage("star.jpg"), -6, 347, 424, 40);
          
     
 //};
@@ -79,7 +79,7 @@ imageMode(CORNER);
 textAlign(LEFT);
 //hearts 
 
-var getHeart = getImage("cute/Heart");
+var getHeart = loadImage("star.jpg");
 var heartPic = function(x, y, size) {
     image(getHeart, x, y, size/1.5, size); 
 };
