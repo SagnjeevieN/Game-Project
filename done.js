@@ -168,15 +168,7 @@ draw = function() {
         } 
      };
 };
-    var btn3 = new Button({
-    x: 220,
-    y: 260,
-    width: 110,
-    label: "Cancel",
-    onClick: function(){
-        drawScene3();
-    }
-});
+
 var drawScene3 = function() {
     currentScene = 3;
     drawBackground();    
@@ -201,6 +193,15 @@ var btn2 = new Button({
     label: "Restart",
     onClick: function(){
         drawScene2();
+    }
+});
+    var btn3 = new Button({
+    x: 220,
+    y: 260,
+    width: 110,
+    label: "Cancel",
+    onClick: function(){
+        drawScene3();
     }
 });
 mouseClicked = function() {
