@@ -27,7 +27,7 @@ var drawScene1 = function() {
 
 textSize(30);
 fill(102, 100, 100);
-text ("Welcome to Our Game!", 45,120); 
+text ("Welcome to Starcatcher Game!", 45,120); 
 
 
 var Button = function(config) {
@@ -78,7 +78,7 @@ imageMode(CORNER);
 textAlign(LEFT);
 //hearts 
 
-var getHeart = loadImage("star.png");
+var getHeart = loadImage("heart.png");
 var heartPic = function(x, y, size) {
     image(getHeart, x, y, size/1.5, size); 
 };
