@@ -206,7 +206,7 @@ var btn2 = new Button({
 mouseClicked = function() {
     btn2.handleMouseClick();
     btn3.handleMouseClick();
-    /*if (currentScene === 1) {
+    if (currentScene === 1) {
         drawScene2();
     } else if (currentScene === 2) {
         drawScene3();
@@ -217,5 +217,5 @@ mouseClicked = function() {
     } else if (currentScene === 5) {
         drawScene1();
     }
-    */
+    
 };
