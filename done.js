@@ -1,8 +1,8 @@
 var currentScene;
-var getGrass;
+var getGrass loadImage("grass.png");
 function setup(){
     createCanvas(400, 400);
-    getGrass = loadImage("grass.png");
+    //getGrass = loadImage("grass.png");
     drawScene1();
 };
 var grassPic = function(x, y, w,h) {
