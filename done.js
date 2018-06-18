@@ -1,9 +1,19 @@
 var currentScene;
 var getGrass;
+var getHeart;
+var getStar;
 function setup(){
     createCanvas(400, 400);
     getGrass = loadImage("grass.png");
+    getStar = loadImage("star.png");
+    getHeart = loadImage("HEART-01.png");
     drawScene1();
+};
+
+//star
+
+var StarPic = function(x, y, size) {
+    image(getStar, x, y, size, size);
 };
 var grassPic = function(x, y, w,h) {
         image(getGrass, x, y, w,h); 
@@ -41,11 +51,6 @@ Button.prototype.handleMouseClick = function() {
 
 var drawBackground = function() {
     
-    
-    /*var grassXs = [];
-    for (var i = 0; i < 8; i++) {
-        grassXs.push(i*23);
-    }*/
     background(212, 241, 255);
     // draw blocks
     grassPic(0, 267, width, height*0.33);
@@ -57,6 +62,7 @@ var drawBackground = function() {
 
 var drawScene1 = function() {
     currentScene = 1;
+draw = function() {
     drawBackground();
     noStroke();
 // sun
@@ -68,16 +74,16 @@ textSize(30);
 fill(102, 100, 100);
 text ("Welcome to Starcatcher!", 45,120); 
 
-
+btn1.draw();
+};
+};
 
 var btn1 = new Button({
     x: 155,
-    y: 145,
+    y: 175,
     width: 80,
     label: "Start",
 });
-btn1.draw();
-};
 
 var drawScene2 = function() {
     currentScene = 2;
@@ -87,19 +93,15 @@ imageMode(CORNER);
 textAlign(LEFT);
     
 //hearts
-var getHeart = loadImage("HEART-01.png");
+
 var heartPic = function(x, y, size) {
     image(getHeart, x, y, size, size); 
 };
 //star
-var getStar = loadImage("star.png");
-var StarPic = function(x, y, size) {
-    image(getStar, x, y, size, size);
-};
 var starSpeed = 3.5;
 var starSpeedIncrease = 0.06;
 var starSpeedDecrease = -1;
-var starY = -5;
+var starY = 5;
 var starX = random(20, 380);
 var points = 0;
 var lives = 3;
@@ -109,13 +111,12 @@ var numStars = 0;
 var page = "menu";
  
 draw = function() {
-    if(mouseIsPressed && mouseX > 155 && mouseX < 255 && mouseY > 150 && mouseY < 200) {
-        page = "StartGame";
-       
-    }
+    //if(mouseIsPressed && mouseX > 155 && mouseX < 255 && mouseY > 150 && mouseY < 200) {
+    //    page = "StartGame";
+    //}
     drawBackground();
     
- var triX = mouseX;
+ 	var triX = mouseX;
         var triY = 320;
         noStroke();
      
@@ -133,7 +134,7 @@ draw = function() {
         }
         
         if(starY > 340 && starX > triX - 25 && starX < triX + 25) {
-            starY = -5;
+            starY = 5;
             starX = random(20, 380);
             starSpeed += starSpeedIncrease;
             points += 1;
@@ -149,7 +150,7 @@ draw = function() {
     
         fill(0, 0, 0);
         text("Lives: ", 250, 30);
-        for(var i = 0; i < lives && lives <=3; i += 1) {
+        for(var i = 0; i < lives ; i += 1) {
             heartPic(303 + i * 20, 30, 20);
         }
         
@@ -157,24 +158,36 @@ draw = function() {
             starX = 500;
             fill(0, 0, 0);
             textSize(25);
-            text("Sorry you lose!", 127, 180);
+            text("Sorry you lose!", 127, 150);
             text("You caught " + points + " star(s) out of " + numStars + " :(", 16, 200);
             btn2.draw();
             btn3.draw();
         }
     
-       if(lives > 3) {
-            lives = 3;
-        } 
+       //if(lives > 3) {
+       //     lives = 3;
+       // } 
      };
 };
 
 var drawScene3 = function() {
+
     currentScene = 3;
-    drawBackground();    
-    text("Thanks for playing!", 200, 200);
-    text("Credits: ", 127, 220);
-    text("Contributors: Sagnjeevie N, Ksenia K, Kate S, Dylan M", 127, 240);
+
+draw = function() {
+  
+    drawBackground(); 
+
+textSize(27);
+fill(255,0,0);
+
+    text("Thank you for playing!", 90, 130);
+textSize(14);
+
+fill(102, 100, 100);
+    text("Credits: ", 30, 240);
+    text("Contributors: Sagnjeevie N, Ksenia K, Kate S, Dylan M", 30, 270);
+};
 };
 
 var drawScene4 = function() {
@@ -208,10 +221,11 @@ var btn2 = new Button({
 mouseClicked = function() {
     btn2.handleMouseClick();
     btn3.handleMouseClick();
+
     if (currentScene === 1) {
         drawScene2();
     } else if (currentScene === 2) {
-        drawScene3();
+	drawScene2();
     } else if (currentScene === 3) {
         drawScene3();
     }  else if (currentScene === 4) {
@@ -219,5 +233,4 @@ mouseClicked = function() {
     } else if (currentScene === 5) {
         drawScene1();
     }
-    
 };
