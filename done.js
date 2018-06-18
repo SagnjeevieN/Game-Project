@@ -114,7 +114,7 @@ draw = function() {
        
     }
     drawBackground();
-    btn2.draw();
+    
  var triX = mouseX;
         var triY = 320;
         noStroke();
@@ -159,6 +159,7 @@ draw = function() {
             textSize(25);
             text("Sorry you lose!", 127, 180);
             text("You caught " + points + " star(s) out of " + numStars + " :(", 16, 200);
+            btn2.draw();
         }
     
        if(lives > 3) {
