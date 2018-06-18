@@ -114,7 +114,7 @@ draw = function() {
        
     }
     drawBackground();
-    btn3.draw();
+    
  var triX = mouseX;
         var triY = 320;
         noStroke();
@@ -160,6 +160,7 @@ draw = function() {
             text("Sorry you lose!", 127, 180);
             text("You caught " + points + " star(s) out of " + numStars + " :(", 16, 200);
             btn2.draw();
+            btn3.draw();
         }
     
        if(lives > 3) {
@@ -167,12 +168,8 @@ draw = function() {
         } 
      };
 };
-
-var drawScene3 = function() {
-    currentScene = 3;
-    drawBackground();
     var btn3 = new Button({
-    x: 150,
+    x: 200,
     y: 260,
     width: 110,
     label: "Cancel",
@@ -180,6 +177,9 @@ var drawScene3 = function() {
         drawScene3();
     }
 });
+var drawScene3 = function() {
+    currentScene = 3;
+    drawBackground();    
     text("Thanks for playing!", 200, 200);
 };
 
