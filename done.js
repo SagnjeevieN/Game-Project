@@ -147,7 +147,7 @@ draw = function() {
         fill(0, 0, 0);
         text("Lives: ", 250, 30);
         for(var i = 0; i < lives && lives <=3; i += 1) {
-            heartPic(303 + i * 20, 0, 47);
+            heartPic(303 + i * 20, 0, 20);
         }
         
         if(lives < 1) {
