@@ -3,6 +3,10 @@ function setup(){
     createCanvas(400, 400);
     drawScene1();
 }
+var getGrass = loadImage("grass.png");
+var grassPic = function(x, y, w, h) {
+    image(getGrass, x, y, w, h); 
+};
 var drawBackground = function() {
     background(212, 241, 255);
     /*var grassXs = [];
@@ -10,7 +14,8 @@ var drawBackground = function() {
         grassXs.push(i*23);
     }*/
     // draw blocks
-   image(loadImage("grass.png"), -6, 147, width, height*0.33);
+    grassPic(-6, 147, width, height*0.33);
+   //image(loadImage("grass.png"), -6, 147, width, height*0.33);
    //fill(133, 80, 45);
    //rect(0, 387, width, height*0.33);
 };
@@ -75,11 +80,11 @@ var drawScene2 = function() {
     //start page alignment
 imageMode(CORNER);
 textAlign(LEFT);
-//hearts 
-
+    
+//hearts
 var getHeart = loadImage("heart.png");
 var heartPic = function(x, y, size) {
-    image(getHeart, x, y, size/1.5, size); 
+    image(getHeart, x, y, size, size); 
 };
 //star
 var getStar = loadImage("star.png");
