@@ -169,7 +169,7 @@ draw = function() {
      };
 };
     var btn3 = new Button({
-    x: 200,
+    x: 220,
     y: 260,
     width: 110,
     label: "Cancel",
@@ -193,7 +193,7 @@ var drawScene5 = function() {
 };
 //create restart button
 var btn2 = new Button({
-    x: 150,
+    x: 90,
     y: 260,
     width: 110,
     label: "Restart",
