@@ -202,7 +202,7 @@ var btn2 = new Button({
     }
 });
 mouseClicked = function() {
-    btn2.handleMouseClick();
+    //btn2.handleMouseClick();
     //btn3.handleMouseClick();
     if (currentScene === 1) {
         drawScene2();
