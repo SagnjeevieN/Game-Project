@@ -83,7 +83,7 @@ var heartPic = function(x, y, size) {
     image(getHeart, x, y, size/1.5, size); 
 };
 //star
-var getStar = loadImage("star.jpg");
+var getStar = loadImage("star.png");
 var StarPic = function(x, y, size) {
     image(getStar, x, y, size, size);
 };
