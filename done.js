@@ -182,8 +182,8 @@ var drawScene5 = function() {
 };
 //create restart button
 var btn2 = new Button({
-    x: 322,
-    y: 3,
+    x: 127,
+    y: 270,
     width: 68,
     label: "Restart",
     onClick: function(){
