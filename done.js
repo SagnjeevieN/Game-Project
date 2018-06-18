@@ -17,7 +17,7 @@ var drawBackground = function() {
     background(212, 241, 255);
     // draw blocks
     grassPic(0, 347, width, height*0.33);
- 
+ noStroke();
    fill(133, 80, 45);
    rect(0, 387, width, height*0.33);
    
