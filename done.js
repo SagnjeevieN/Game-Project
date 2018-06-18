@@ -216,4 +216,4 @@ mouseClicked = function() {
     
 };
 
-drawScene1();
+//drawScene1();
