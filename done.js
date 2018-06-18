@@ -5,7 +5,7 @@ function setup(){
 }
 
 var drawBackground = function() {
-    background(212, 241, 255);
+    
     var getGrass = loadImage("grass.png");
     var grassPic = function(x, y, w, h) {
         alert ("grass");
@@ -15,6 +15,7 @@ var drawBackground = function() {
     for (var i = 0; i < 8; i++) {
         grassXs.push(i*23);
     }*/
+    background(212, 241, 255);
     // draw blocks
     grassPic(0, 347, width, height*0.33);
  
