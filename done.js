@@ -114,7 +114,7 @@ draw = function() {
        
     }
     drawBackground();
-    
+    btn3.draw();
  var triX = mouseX;
         var triY = 320;
         noStroke();
@@ -171,7 +171,7 @@ draw = function() {
 var drawScene3 = function() {
     currentScene = 3;
     drawBackground();
-    var btn2 = new Button({
+    var btn3 = new Button({
     x: 150,
     y: 260,
     width: 110,
@@ -203,6 +203,7 @@ var btn2 = new Button({
 });
 mouseClicked = function() {
     btn2.handleMouseClick();
+    btn3.handleMouseClick();
     if (currentScene === 1) {
         drawScene2();
     } else if (currentScene === 2) {
