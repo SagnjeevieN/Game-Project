@@ -14,7 +14,7 @@ var drawBackground = function() {
    
     // draw blocks
     
-   image(loadImage("star.png"), -6, 347, 424, 40);
+   image(loadImage("grass.png"), -6, 347, 424, 40);
 };
 var drawScene1 = function() {
     currentScene = 1;
