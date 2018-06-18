@@ -5,10 +5,10 @@ function setup(){
 }
 var drawBackground = function() {
     background(212, 241, 255);
-    var grassXs = [];
+    /*var grassXs = [];
     for (var i = 0; i < 8; i++) {
         grassXs.push(i*23);
-    }
+    }*/
     // draw blocks
    image(loadImage("grass.png"), -6, 147, 410, 40);
    fill(133, 80, 45);
@@ -146,7 +146,7 @@ draw = function() {
             starX = 500;
             fill(0, 0, 0);
             textSize(25);
-            text("You LOSE!", 127, 180);
+            text("Sorry you lose!", 127, 180);
             text("You caught " + points + " star(s) out of " + numStars + " :(", 16, 200);
         }
     
