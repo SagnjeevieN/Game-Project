@@ -1,11 +1,15 @@
 var currentScene;
+function setup(){
+    createCanvas(400, 400);
+    drawScene1();
+            }
 var drawBackground = function() {
     background(212, 241, 255);
-var grassXs = [];
-for (var i = 0; i < 8; i++) {
-    grassXs.push(i*23);
-}
-//draw = function() {
+    var grassXs = [];
+    for (var i = 0; i < 8; i++) {
+        grassXs.push(i*23);
+    }
+    //draw = function() {
     
           fill(133, 80, 45);
     rect(0, 387, width, height*0.33);
