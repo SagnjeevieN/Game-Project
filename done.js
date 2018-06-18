@@ -116,7 +116,7 @@ draw = function() {
     drawBackground();
     
  var triX = mouseX;
-        var triY = 340;
+        var triY = 320;
         noStroke();
      
         fill(0, 0, 0);
@@ -126,7 +126,7 @@ draw = function() {
         starY += starSpeed;
         
         fill(0, 110, 179);
-        quad(triX+15, 360, triX-15, 360, triX-25,triY, triX+25,triY);
+        quad(triX+15, 387, triX-15, 387, triX-25,triY, triX+25,triY);
         
         if(lives > 3) {
             lives = 3;
