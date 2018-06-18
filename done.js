@@ -9,12 +9,12 @@ var drawBackground = function() {
     for (var i = 0; i < 8; i++) {
         grassXs.push(i*23);
     }
-          fill(133, 80, 45);
-    rect(0, 387, width, height*0.33);
-   
     // draw blocks
    image(loadImage("grass.png"), -6, 147, 410, 40);
+   fill(133, 80, 45);
+   rect(0, 387, width, height*0.33);
 };
+
 var drawScene1 = function() {
     currentScene = 1;
     drawBackground();
