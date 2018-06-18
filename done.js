@@ -170,6 +170,17 @@ draw = function() {
 
 var drawScene3 = function() {
     currentScene = 3;
+    drawBackground();
+    var btn2 = new Button({
+    x: 150,
+    y: 260,
+    width: 110,
+    label: "Cancel",
+    onClick: function(){
+        drawScene3();
+    }
+});
+    text("Thanks for playing!", 200, 200);
 };
 
 var drawScene4 = function() {
