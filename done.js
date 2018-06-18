@@ -181,6 +181,8 @@ var drawScene3 = function() {
     currentScene = 3;
     drawBackground();    
     text("Thanks for playing!", 200, 200);
+    text("Credits: ", 127, 220);
+    text("Contributors: Sagnjeevie N, Ksenia K, Kate S, Dylan M", 127, 240);
 };
 
 var drawScene4 = function() {
