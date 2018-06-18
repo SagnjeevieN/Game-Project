@@ -3,12 +3,13 @@ function setup(){
     createCanvas(400, 400);
     drawScene1();
 }
-var getGrass = loadImage("grass.png");
-var grassPic = function(x, y, w, h) {
-    image(getGrass, x, y, w, h); 
-};
+
 var drawBackground = function() {
     background(212, 241, 255);
+    var getGrass = loadImage("grass.png");
+    var grassPic = function(x, y, w, h) {
+    image(getGrass, x, y, w, h); 
+};
     /*var grassXs = [];
     for (var i = 0; i < 8; i++) {
         grassXs.push(i*23);
