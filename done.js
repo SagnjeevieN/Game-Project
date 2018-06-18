@@ -8,36 +8,6 @@ function setup(){
 var grassPic = function(x, y, w,h) {
         image(getGrass, x, y, w,h); 
     };
-var drawBackground = function() {
-    
-    
-    /*var grassXs = [];
-    for (var i = 0; i < 8; i++) {
-        grassXs.push(i*23);
-    }*/
-    background(212, 241, 255);
-    // draw blocks
-    grassPic(0, 347, width, height*0.33);
-
-   fill(133, 80, 45);
-   rect(0, 387, width, height*0.33);
-   
-};
-
-var drawScene1 = function() {
-    currentScene = 1;
-    drawBackground();
-    noStroke();
-// sun
-     fill(255, 247, 0); 
-     ellipse(346, 41, 70, 70);
-
-
-textSize(30);
-fill(102, 100, 100);
-text ("Welcome to Starcatcher!", 45,120); 
-
-
 var Button = function(config) {
     this.x = config.x || 0;
     this.y = config.y || 0;
@@ -68,6 +38,37 @@ Button.prototype.handleMouseClick = function() {
         this.onClick();
     }
 };
+
+var drawBackground = function() {
+    
+    
+    /*var grassXs = [];
+    for (var i = 0; i < 8; i++) {
+        grassXs.push(i*23);
+    }*/
+    background(212, 241, 255);
+    // draw blocks
+    grassPic(0, 347, width, height*0.33);
+
+   fill(133, 80, 45);
+   rect(0, 387, width, height*0.33);
+   
+};
+
+var drawScene1 = function() {
+    currentScene = 1;
+    drawBackground();
+    noStroke();
+// sun
+     fill(255, 247, 0); 
+     ellipse(346, 41, 70, 70);
+
+
+textSize(30);
+fill(102, 100, 100);
+text ("Welcome to Starcatcher!", 45,120); 
+
+
 
 var btn1 = new Button({
     x: 155,
