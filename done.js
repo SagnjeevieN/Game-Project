@@ -195,6 +195,7 @@ var btn2 = new Button({
         drawScene2();
     }
 });
+//cancel button
     var btn3 = new Button({
     x: 220,
     y: 260,
