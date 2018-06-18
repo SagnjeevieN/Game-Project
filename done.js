@@ -184,7 +184,7 @@ var drawScene5 = function() {
 var btn2 = new Button({
     x: 150,
     y: 260,
-    width: 90,
+    width: 110,
     label: "Restart",
     onClick: function(){
         drawScene2();
