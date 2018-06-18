@@ -1,9 +1,8 @@
 var currentScene;
 function setup(){
     createCanvas(400, 400);
-    background(212, 241, 255);
     drawScene1();
-            }
+}
 var drawBackground = function() {
     background(212, 241, 255);
     var grassXs = [];
@@ -17,10 +16,7 @@ var drawBackground = function() {
    
     // draw blocks
     
-        image(loadImage("star.jpg"), -6, 347, 424, 40);
-         
-    
-//};
+   image(loadImage("star.jpg"), -6, 347, 424, 40);
 };
 var drawScene1 = function() {
     currentScene = 1;
@@ -196,14 +192,14 @@ var drawScene5 = function() {
     currentScene = 5;
     
 };
-
+/*
 draw = function() {
     if (currentScene === 4) {
         drawScene4();
     }
     
 };
-
+*/
 mouseClicked = function() {
     
     if (currentScene === 1) {
