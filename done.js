@@ -1,13 +1,12 @@
 var currentScene;
 function setup(){
     createCanvas(400, 400);
-    var grassPic = function(x, y, w, h) {
+    drawScene1();
+}
+var grassPic = function(x, y, w, h) {
         var getGrass = loadImage("HEART-01.png");
         image(getGrass, x, y, w, h); 
     };
-    drawScene1();
-}
-
 var drawBackground = function() {
     
     
