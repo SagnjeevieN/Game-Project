@@ -9,8 +9,6 @@ var drawBackground = function() {
     for (var i = 0; i < 8; i++) {
         grassXs.push(i*23);
     }
-    //draw = function() {
-    
           fill(133, 80, 45);
     rect(0, 387, width, height*0.33);
    
@@ -26,7 +24,7 @@ var drawScene1 = function() {
      fill(255, 247, 0); 
      ellipse(346, 41, 70, 70);
 
-var f = createFont ("Arial");
+var f = loadFont ("Arial");
 textFont(f,30);
 fill(102, 100, 100);
 text ("Welcome to Our Game!", 45,120); 
