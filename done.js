@@ -186,7 +186,7 @@ var btn2 = new Button({
     width: 68,
     label: "Restart",
     onClick: function(){
-        Program.restart();
+        drawScene2();
     }
 });
 mouseClicked = function() {
