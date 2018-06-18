@@ -85,7 +85,7 @@ imageMode(CORNER);
 textAlign(LEFT);
     
 //hearts
-var getHeart = loadImage("heart.png");
+var getHeart = loadImage("HEART-01.png");
 var heartPic = function(x, y, size) {
     image(getHeart, x, y, size, size); 
 };
