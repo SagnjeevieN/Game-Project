@@ -177,9 +177,18 @@ var drawScene5 = function() {
     currentScene = 5;
     
 };
-
+//create restart button
+var btn2 = new Button({
+    x: 322,
+    y: 3,
+    width: 68,
+    label: "Restart",
+    onClick: function(){
+        Program.restart();
+    }
+});
 mouseClicked = function() {
-    
+    btn2.handleMouseClick();
     if (currentScene === 1) {
         drawScene2();
     } else if (currentScene === 2) {
