@@ -1,4 +1,9 @@
 var currentScene;
+
+var getGrass = loadImage("HEART-01.png");
+    var grassPic = function(x, y, w, h) {
+        image(getGrass, x, y, w, h); 
+    };
 function setup(){
     createCanvas(400, 400);
     drawScene1();
@@ -6,10 +11,7 @@ function setup(){
 
 var drawBackground = function() {
     
-    var getGrass = loadImage("HEART-01.png");
-    var grassPic = function(x, y, w, h) {
-        image(getGrass, x, y, w, h); 
-    };
+    
     /*var grassXs = [];
     for (var i = 0; i < 8; i++) {
         grassXs.push(i*23);
@@ -17,7 +19,7 @@ var drawBackground = function() {
     background(212, 241, 255);
     // draw blocks
     grassPic(0, 347, width, height*0.33);
- noStroke();
+
    fill(133, 80, 45);
    rect(0, 387, width, height*0.33);
    
