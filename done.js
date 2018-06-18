@@ -8,7 +8,7 @@ var drawBackground = function() {
     
     var getGrass = loadImage("grassS.png");
     var grassPic = function(x, y, w, h) {
-        image(getGrass, x, y, w-700, h); 
+        image(getGrass, x, y, w, h); 
     };
     /*var grassXs = [];
     for (var i = 0; i < 8; i++) {
