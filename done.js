@@ -17,10 +17,11 @@ var drawBackground = function() {
     // draw blocks
     grassPic(0, 147, width, height*0.33);
    //image(loadImage("grass.png"), -6, 147, width, height*0.33);
+   fill(green);
+   rect(0, 347, width, height*0.33);
    fill(133, 80, 45);
    rect(0, 387, width, height*0.33);
-   fill(green);
-   rect(0, 147, width, height*0.33);
+   
 };
 
 var drawScene1 = function() {
